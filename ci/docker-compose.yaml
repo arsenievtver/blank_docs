@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: blanc_docs_app
+    image: akafer/blanc_docs
+    restart: on-failure
+    ports:
+      - "8500:8500"
+    command: uvicorn main:app --host 0.0.0.0 --port=8500
